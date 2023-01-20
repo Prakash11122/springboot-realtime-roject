@@ -15,7 +15,6 @@ import com.example.demo.binding.Contact;
 import com.example.demo.service.ContactService;
 
 
-
 @RestController
 public class ContactRestController {
 	
@@ -32,6 +31,7 @@ public class ContactRestController {
 	public List<Contact> getAllContacts(){
 		return service.getAllContacts();
 	}
+	
 	@GetMapping("/contact/{contactId}")
 	public Contact getContactById(@PathVariable Integer contactId) {
 		return service.getContactById(contactId);
